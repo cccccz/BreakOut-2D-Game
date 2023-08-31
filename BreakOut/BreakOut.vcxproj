@@ -24,6 +24,7 @@
     <ProjectGuid>{e06b0c08-b61e-47ba-8876-2c77eafd5e13}</ProjectGuid>
     <RootNamespace>BreakOut</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SpinningBox</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
