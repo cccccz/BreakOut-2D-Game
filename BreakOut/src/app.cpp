@@ -74,13 +74,16 @@ int main()
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
+
+
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     // glBindVertexArray(0);
 
-
     // render loop
     // -----------
+    float offset = 0.5f;
+
     while (!glfwWindowShouldClose(window))
     {
         // input
@@ -93,6 +96,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // render the triangle
+        ourShader.setFloat("xOffset", offset);
         ourShader.use();
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
