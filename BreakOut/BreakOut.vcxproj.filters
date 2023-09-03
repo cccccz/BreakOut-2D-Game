@@ -24,6 +24,9 @@
     <ClInclude Include="src\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\glad.c">
@@ -32,9 +35,17 @@
     <ClCompile Include="src\app.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\stb_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\FragmentShader.fs" />
     <Text Include="src\VertexShader.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\container.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
