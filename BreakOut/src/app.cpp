@@ -233,7 +233,10 @@ int main()
         glm::mat4 projection = glm::mat4(1.0f);
 
         view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+
         projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+        projection = glm::rotate(projection, (float)sin(glfwGetTime()), glm::vec3(0.0f, 0.0f, 1.0f));
+
 
         glm::mat4 trans = glm::mat4(1.0f);
         trans = glm::rotate(trans, (float)sin(glfwGetTime()), glm::vec3(0.0f, 0.0f, 1.0f));
